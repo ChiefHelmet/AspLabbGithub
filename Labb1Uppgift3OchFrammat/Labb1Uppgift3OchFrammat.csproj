@@ -170,6 +170,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LaserController.cs" />
+    <Compile Include="Controllers\LifeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SellController.cs" />
     <Compile Include="Global.asax.cs">
@@ -244,6 +246,13 @@
     <Content Include="Views\Sell\B2C.cshtml" />
     <Content Include="Views\Sell\C2C.cshtml" />
     <Content Include="Views\Sell\Completion.cshtml" />
+    <Content Include="Views\Life\SuperMario.cshtml" />
+    <Content Include="Views\Life\Health.cshtml" />
+    <Content Include="Views\Life\Live.cshtml" />
+    <Content Include="Views\Laser\Sabel.cshtml" />
+    <Content Include="Views\Laser\Eye.cshtml" />
+    <Content Include="Views\Laser\Pointer.cshtml" />
+    <Content Include="Views\Laser\Printer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

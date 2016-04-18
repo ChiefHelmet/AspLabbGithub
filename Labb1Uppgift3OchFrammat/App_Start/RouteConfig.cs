@@ -11,6 +11,28 @@ namespace Labb1Uppgift3OchFrammat
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            routes.MapRoute(
+     name: "Life",
+     url: "Life/{action}/{id}",
+     defaults: new
+     {
+         controller = "Life",
+         action = "Health",
+         id = UrlParameter.Optional
+     }
+);
+
+            routes.MapRoute(
+     name: "Laser",
+     url: "Laster/{action}/{id}",
+     defaults: new
+     {
+         controller = "Laser",
+         action = "Eye",
+         id = UrlParameter.Optional
+     }
+);
+
 
             routes.MapRoute(
                  name: "Sell",
