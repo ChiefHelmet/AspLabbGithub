@@ -24,7 +24,7 @@ namespace Labb1Uppgift3OchFrammat
 
             routes.MapRoute(
      name: "Laser",
-     url: "Laster/{action}/{id}",
+     url: "Laser/{action}/{id}",
      defaults: new
      {
          controller = "Laser",
