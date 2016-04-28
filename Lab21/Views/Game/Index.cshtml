@@ -1,0 +1,23 @@
+﻿@model Lab21.Models.Game
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form method="post" action="Index">
+        <div>            
+            Nummer
+            <br />
+            <input name="number" type="text" />
+            <br />
+            <input type="submit" value="Spela" />
+            <br />
+            @Model.result
+        </div>
+        <input name="oldNum" type="text" value="@Model.number" hidden="hidden" />
+    </form>
+</body>
+</html>
