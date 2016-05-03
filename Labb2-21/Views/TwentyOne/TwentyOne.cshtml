@@ -1,0 +1,18 @@
+﻿@using System.Web.UI.WebControls
+@model Labb2_21.Models.TwentyOne
+@{
+    ViewBag.Title = "TwentyOne";
+}
+
+<h1>TwentyOne</h1>
+
+<h2>@Model.ActivePlayer.Name - @Model.ActivePlayer.Moves</h2>
+
+<h3>@Html.DisplayNameFor(m => m.Sum): @Model.Sum</h3>
+
+@using (Html.BeginForm("Index", "TwentyOne"))
+{
+    <button type="submit" name="button" value="1">One</button>
+    
+    <button type="submit" name="button" value="2">Two</button>
+}

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Lab21
+namespace Labb2_21
 {
     public class RouteConfig
     {
@@ -16,12 +16,7 @@ namespace Lab21
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Game", id = UrlParameter.Optional }
-
-                //routes.MapRoute(
-                //name: "Default",
-                //url: "{controller}/{action}/{id}",
-                //defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "TwentyOne", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
