@@ -46,10 +46,16 @@ namespace Labb2TicTacToe.Controllers
 
             bool gameOn = ticTacToeModel.GameOn(button);
 
-            if (!gameOn)
+            if (!gameOn && ticTacToeModel.Tie)
             {
                 return View("TicTacTie", ticTacToeModel);
             }
+            if (!gameOn)
+            {
+                return View("TicTacWin", ticTacToeModel.ActivePlayer);
+            }
+            
+
 
             return View("TicTacToe", ticTacToeModel);  //Måste alltid speca vilken modell som skall med 
         }

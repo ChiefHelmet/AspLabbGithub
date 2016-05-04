@@ -15,6 +15,10 @@ namespace Labb2TicTacToe.Models
 
         public List<Move> Moves { get; set; } = new List<Move>();
 
+        public bool Tie { get; set; } = false;
+
+
+
         public TicTacToe(List<Player> players )
         {
             Players = players;
@@ -30,8 +34,12 @@ namespace Labb2TicTacToe.Models
 
             //TODO: Implementera vinst-koll.
 
+
+
             if (Moves.Count >= 9)
             {
+                Tie = true;
+
                 return false;
             }
 
