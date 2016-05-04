@@ -1,0 +1,13 @@
+﻿@model Labb2TicTacToe.Models.TicTacToe
+
+@{
+    ViewBag.Title = "TicTacTie";
+}
+
+<h2>TicTacTie</h2>
+
+@foreach (var player in Model.Players)
+{
+    <p>@player.Name gjorde @player.Moves drag.</p>
+    
+}

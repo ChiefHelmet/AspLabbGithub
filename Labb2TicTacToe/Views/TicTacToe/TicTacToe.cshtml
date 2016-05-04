@@ -1,0 +1,37 @@
+﻿@model Labb2TicTacToe.Models.TicTacToe
+
+@{
+    ViewBag.Title = "TicTacToe";
+}
+
+<h2>TicTacToe</h2>
+@ViewBag.Kristian
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        @using (Html.BeginForm("Index", "TicTacToe"))
+        {
+
+            for (int i = 0, x = 1; i < 3; i++)
+            {
+                <div class="row">
+
+                    @for (int j = 0; j < 3; j++, x *= 2) //återanvänder denna loop 3 ggr
+                    {
+                        var cell = Model.Moves.FirstOrDefault(m => m.Cell == x);    // Letar efter det första objektetet i Moves-listan som har samma värde i Cell som 'x'
+                        var activeButton = string.Empty;
+                        var symbol = '\0';                                          // Här skapar vi en variabel som kommer hålla på symbolen om cell inte är null. '\0' är                                                                 escape-tecken för ett tomm karaktär
+
+                        if (cell != null)                                           // Kollar så att det fanns ett objekt i listan med samma värde där cell är == x
+                        {
+                            symbol = cell.Symbol;                                   // Är cell inte null så tar vi cell-Symbol och sparar i Symbol-variabel.
+                            activeButton = "disabled";
+                        }
+
+                        <button type="submit" name="button" value="@x" class="col-md-1 btn btn-default" @activeButton>@symbol</button>    // Symbol sätter vilket värde det ska vara på knappen.
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>

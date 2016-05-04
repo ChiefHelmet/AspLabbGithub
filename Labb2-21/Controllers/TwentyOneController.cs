@@ -12,8 +12,8 @@ namespace Labb2_21.Controllers
         // GET: TwentyOne
         public ActionResult Index()
         {
-            var players = new List<Player>() { 
-                
+            var players = new List<Player>() {
+
                 new Player()
             {
                 Name = "Stanislav Kolski",
