@@ -26,10 +26,25 @@ namespace Labb3Two.Controllers
 
         // GET: /HelloWorld/
 
-        public string Index()
+        //public string Index()
+        //{
+        //    return "This is my default action...";
+        //}
+
+        public IActionResult Index()
         {
-            return "This is my default action...";
+            return View();
         }
+
+        public IActionResult Welcome(string name, int numTimes = 1)
+        {
+            //ViewData["Welcome"] = "Hello, " + name;
+            ViewData["Message"] = "Hello, " + name;
+            ViewData["numTimes"] = numTimes;
+
+            return View();
+        }
+
 
 
         // GET: /HelloWorld/Welcome/ 
